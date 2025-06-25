@@ -6,7 +6,7 @@
 }
 /* nav */
 .navbar {
-  background-color: #fff;
+  background-color: var(--background-color);
   padding: 10px 20px;
 }
 
@@ -274,7 +274,7 @@
     color: var(--accent-color);
 }
 .faq-section {
-  padding: 50px 20px;
+  padding: 80px 80px;
   text-align: center;
   font-family: Arial, sans-serif;
   display: flex;
@@ -285,6 +285,7 @@
 .faq-section h2 {
   font-size: 2rem;
   font-weight: bold;
+  background-color: var(--caret-color);
 }
 
 .faq-section p {
@@ -477,213 +478,113 @@ body {
 }
 
 /* footer */
-
-/* footer */
-footer {
-  background-color: var(--accent-color);
-  color: white;
-  border-radius: 10px;
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
 }
 
 .footer {
-  padding: 40px 60px;
-
+  background-color: #0f0f11;
+  color: #fff;
+  padding: 40px 20px;
 }
 
-.footerdivcontainer {
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1300px;
-  margin: 0 auto;
 }
 
-.footerdiv1 {
-  flex: 1 1 150px;
-  min-width: 180px;
+.footer-logo h2 {
+  color: white;
 }
 
-/* 🔹 Logo Image Hover */
-.footerdiv1 img {
-  width: 30px;
-  vertical-align: middle;
-  margin-right: 10px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.footerdiv1 img:hover {
-  transform: scale(1.2) rotate(-10deg);
-  filter: drop-shadow(0 0 6px #00bfff);
-}
-
-.footerdiv1 p {
-  font-size: 14px;
-  color: #cccccc;
-  margin-top: 10px;
-  line-height: 1.6em;
-}
-
-.footerdiv1 h4 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: #ffffff;
-}
-
-.footerdiv1 ul {
+.footer-links {
   list-style: none;
+  display: flex;
+  gap: 20px;
   padding: 0;
 }
 
-/* 🔹 LI Hover Animation */
-.footerdiv1 ul li {
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #bbbbbb;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  position: relative;
-}
-
-.footerdiv1 ul li:hover {
-  color: #00bfff;
-  transform: translateX(5px);
-}
-
-.footerdiv1 ul li::before {
-  content: "➤";
-  position: absolute;
-  left: -15px;
-  opacity: 0;
-  transition: 0.3s;
-  color: #00bfff;
-}
-
-.footerdiv1 ul li:hover::before {
-  opacity: 1;
-  left: -20px;
-}
-
-/* 🔹 Social Icons with Animation */
-.footerdiv1 a {
-  font-size: 22px;
+.footer-links a {
   color: white;
-  margin-right: 15px;
-  display: inline-block;
-  transition: all 0.3s ease;
-  filter: grayscale(100%) brightness(80%);
-  transform: scale(1);
+  text-decoration: none;
+  font-size: 14px;
 }
 
-.footerdiv1 a:hover {
-  transform: scale(1.2) rotate(5deg);
-  filter: grayscale(0%) brightness(120%) drop-shadow(0 0 6px #00bfff);
+.footer-social a img {
+  width: 24px;
+  margin-left: 10px;
 }
 
-/* 🎨 Individual Hover Colors */
-.footerdiv1 a[href*="linkedin"]:hover {
-  color: #0077b5;
-  filter: drop-shadow(0 0 6px #0077b5);
-}
-
-.footerdiv1 a[href*="youtube"]:hover {
-  color: #ff0000;
-  filter: drop-shadow(0 0 6px #ff0000);
-}
-
-.footerdiv1 a[href*="github"]:hover {
-  color: #999;
-  filter: drop-shadow(0 0 6px #999);
-}
-
-.footerdiv1 a[href*="instagram"]:hover {
-  color: #e1306c;
-  filter: drop-shadow(0 0 6px #e1306c);
-}
-
-/* Optional: Icons wrapper */
-.icondiv {
+.footer-middle {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: space-between;
+  margin-top: 40px;
+  flex-wrap: wrap;
 }
 
-.icondiv i {
-  font-size: 1.6em;
+.contact-info {
+  max-width: 300px;
 }
 
-
-@media screen and (max-width: 1024px) {
-  .footerdivcontainer {
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
+.contact-label {
+  background-color: #b5ff49;
+  color: black;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
-@media screen and (max-width: 768px) {
-  .footer {
-    padding: 30px 20px;
-    text-align: center;
-  }
-
-  .footerdivcontainer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footerdiv1 {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 30px;
-  }
-
-  .footerdiv1 img {
-    display: block;
-    margin: 0 auto 10px auto;
-  }
-
-  .footerdiv1 h4 {
-    font-size: 20px;
-    margin-top: 10px;
-  }
-
-  .footerdiv1 ul li {
-    font-size: 15px;
-  }
-
-  .footerdiv1 p {
-    font-size: 15px;
-  }
-
-  .footerdiv1 a {
-    font-size: 26px;
-    margin: 0 10px;
-  }
-
-  .icondiv {
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
+.newsletter {
+  background-color: #1c1c1e;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-@media screen and (max-width: 480px) {
-  .footer {
-    padding: 20px 15px;
-  }
+.newsletter input {
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 4px;
+  width: 220px;
+}
 
-  .footerdiv1 h4 {
-    font-size: 18px;
-  }
+.newsletter button {
+  background-color: #b5ff49;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-  .footerdiv1 p,
-  .footerdiv1 ul li {
-    font-size: 14px;
-  }
+hr {
+  border: 0.5px solid #333;
+  margin: 30px 0;
+}
 
-  .footerdiv1 a {
-    font-size: 24px;
-  }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: underline;
 }
